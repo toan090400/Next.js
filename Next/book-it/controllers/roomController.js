@@ -5,7 +5,7 @@ const allRoom = async (req, res) => {
     const room = await Room.find();
     res.status(200).json({
       success: true,
-      message: "allRoom",
+      message: "allRoom thành công",
       count: room.length,
       room,
     });
@@ -22,7 +22,7 @@ const getRoom = async (req, res) => {
     const room = await Room.findById(req.query.id);
     res.status(200).json({
       success: true,
-      message: "getRoom",
+      message: "getRoom thành công",
       room,
     });
   } catch (error) {
@@ -47,7 +47,7 @@ const newRoom = async (req, res) => {
     const newRoom = await Room.create(req.body);
     res.status(200).json({
       success: true,
-      message: "newRoom",
+      message: "newRoom thành công",
       newRoom,
     });
   } catch (error) {
@@ -66,7 +66,7 @@ const updateRoom = async (req, res) => {
     });
     res.status(200).json({
       success: true,
-      message: "updateRoom",
+      message: "updateRoom thành công",
       room,
     });
   } catch (error) {
@@ -82,7 +82,7 @@ const deleteRoom = async (req, res) => {
     const room = await Room.findByIdAndDelete(req.query.id);
     res.status(200).json({
       success: true,
-      message: "deleteRoom",
+      message: "deleteRoom thành công",
       room,
     });
   } catch (error) {
