@@ -1,16 +1,11 @@
-const Detail = ({ users }) => {
+const Detail = ({ dataId }) => {
+  // console.log(dataId);
   return (
     <>
-      <h1>detail page</h1>
+      <h1>{dataId.id}</h1>
+      <h1>{dataId.name}</h1>
+      <h1>{dataId.username}</h1>
     </>
   );
 };
 export default Detail;
-// export const getServerSideProps = async (context) => {
-//   // Fetch data from external API
-//   const res = await fetch(`https://.../data/${context.params.id}`);
-//   const data = await res.json();
-
-//   // Pass data to the page via props
-//   return { props: { data } };
-// };
