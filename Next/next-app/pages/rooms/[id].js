@@ -1,16 +1,14 @@
 import Head from "next/head";
 import LayoutAdmin from "../../components/Layout/Admin/Layout";
 import DetailPage from "../../components/rooms/detail";
-const Detail = (data) => {
-  console.log(data);
-  const detail = data.post.data;
+const Detail = ({ data }) => {
   return (
     <>
       <Head>
         <title>detail</title>
       </Head>
       <LayoutAdmin>
-        <DetailPage dataId={detail} />
+        <DetailPage dataId={data} />
       </LayoutAdmin>
     </>
   );
@@ -48,6 +46,6 @@ export async function getStaticProps(context) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${item}`);
   const data = await res.json();
   return {
-    props: { post: { data } },
+    props: { data },
   };
 }

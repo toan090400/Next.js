@@ -1,5 +1,4 @@
 const Detail = ({ dataId }) => {
-  // console.log(dataId);
   return (
     <>
       <h1>{dataId.id}</h1>
