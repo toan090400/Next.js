@@ -7,6 +7,14 @@ const ImageLocalSchema = new mongoose.Schema(
         trim: true,
       },
     },
+    images: [
+      {
+        filename: {
+          type: String,
+          trim: true,
+        },
+      },
+    ],
   },
   { timestamps: true }
 );

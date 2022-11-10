@@ -36,7 +36,7 @@ export const config = {
   },
 };
 const upload = multer({ storage, fileFilter });
-const image = upload.single("image");
+const image = upload.array("image");
 
 const handler = nextConnect();
 
