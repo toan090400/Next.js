@@ -1,0 +1,35 @@
+.container_search {
+  width: 80%;
+  margin: 80px auto auto auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form_search {
+  width: 80%;
+  min-width: 500px;
+  padding: 10px 20px;
+  background-color: rgb(75, 74, 74);
+  border-radius: 60px;
+}
+.form_search .input_search {
+  background: transparent;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: #cac7ff;
+}
+.form_search .btn_search {
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  float: right;
+  cursor: pointer;
+}
+.form_search .btn_search i {
+  font-size: 20px;
+  color: #000;
+}
