@@ -17,8 +17,18 @@ const drive = google.drive({
   auth: oauth2Client,
 });
 const allBook = async (req, res) => {
+  const search = req.query.search || "";
   try {
-    const books = await Book.find()
+    const books = await Book.find({
+      $or: [
+        {
+          name: { $regex: search },
+        },
+        // {
+        //   status: { $regex: req.query.search },
+        // },
+      ],
+    })
       .populate({
         path: "userId",
         select: "username -_id",
@@ -202,4 +212,5 @@ const imageBook = async (req, res) => {
     });
   }
 };
+
 export { allBook, newBook, getBook, updateBook, deleteBook, imageBook };
